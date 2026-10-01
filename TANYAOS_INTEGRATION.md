@@ -69,8 +69,9 @@ Hosts can pass `storage_provider=callable` to `BrainMonitor` to use their own
 writable storage boundary. TanyaOS injects its protected-core `storage_root`
 function, retaining source-checkout data and packaged userData behavior.
 
-TanyaOS continues using its existing integration. This fork publishes a reusable
-snapshot; it does not migrate the application's imports or change its runtime.
+TanyaOS consumes this package through a pinned Git submodule at
+`vendor/braincog`. Its compatibility adapters import the shared implementations
+and inject the application's protected-core storage provider.
 The frontend, executive CognitiveKernel, server, speech engines, model weights,
 anatomical atlas, and Blender assets are outside this package's scope.
 Source lineage and licenses are documented in [CREDITS.md](CREDITS.md).

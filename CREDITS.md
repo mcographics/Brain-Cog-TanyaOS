@@ -37,5 +37,6 @@ or TanyaOS frontend assets are added by this integration.
 The adapted TanyaOS files and their exact source revision and hashes are listed
 in [PROVENANCE.json](tanyaos_braincog/PROVENANCE.json). Standalone changes replace
 protected-core storage imports with explicit local storage, default discovery
-to this fork, and normalize/create the runtime directory. The event adapter
+to this fork, normalize/create the runtime directory, and allow an explicit
+host storage provider. The event adapter
 and multiscale algorithms are preserved from the recorded TanyaOS revision.
