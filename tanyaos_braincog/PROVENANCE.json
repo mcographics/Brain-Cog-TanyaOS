@@ -1,0 +1,18 @@
+{
+  "source_repository": "https://github.com/mcographics/TanyaOS",
+  "source_revision": "d4294cffba914cd01212255de2b88d4a5405d83c",
+  "files": {
+    "monitoring.py": {
+      "source_path": "BACKEND/brain/monitoring.py",
+      "source_sha256": "128bb351635dd8bdac9da5e1200708a56819237a0f31554d508b5e9702ba2b7d"
+    },
+    "multiscale.py": {
+      "source_path": "BACKEND/brain/multiscale.py",
+      "source_sha256": "433de692b5d02a4e73f6477090cb7753d7e16b1695a18a3d63c4180a858b36c6"
+    },
+    "cognitive_adapter.py": {
+      "source_path": "BACKEND/brain/integration/cognitive_adapter.py",
+      "source_sha256": "b7d3057b6aad4102b9e7798f192174e15dca458115aca70181b14f3f12a328c2"
+    }
+  }
+}

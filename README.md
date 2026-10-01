@@ -1,3 +1,17 @@
+# BrainCog — TanyaOS integration fork
+
+Maintained by Kenneth Salmon ([mcographics](https://github.com/mcographics)).
+Forked from [BrainCog-X/Brain-Cog](https://github.com/BrainCog-X/Brain-Cog).
+This fork adds a standalone local telemetry integration adapted from
+[TanyaOS](https://github.com/mcographics/TanyaOS). Upstream BrainCog authors retain
+credit for the engine, algorithms, examples, and research.
+
+See [integration setup and limitations](TANYAOS_INTEGRATION.md) and
+[credits and license inventory](CREDITS.md). The original upstream README,
+including its research citation, follows unchanged below.
+
+---
+
 # BrainCog
 
 ---

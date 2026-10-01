@@ -1,0 +1,8 @@
+include LICENSE
+include CREDITS.md
+include TANYAOS_INTEGRATION.md
+include requirements-tanyaos.txt
+include requirements.txt
+include examples/Social_Cognition/MAToM-SNN/LICENSE
+recursive-include tanyaos_braincog *.py LICENSE PROVENANCE.json
+recursive-include tests_tanyaos *.py
