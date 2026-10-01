@@ -65,6 +65,10 @@ does not discover or open your installed TanyaOS user storage. An optional
 
 ## Relationship to TanyaOS
 
+Hosts can pass `storage_provider=callable` to `BrainMonitor` to use their own
+writable storage boundary. TanyaOS injects its protected-core `storage_root`
+function, retaining source-checkout data and packaged userData behavior.
+
 TanyaOS continues using its existing integration. This fork publishes a reusable
 snapshot; it does not migrate the application's imports or change its runtime.
 The frontend, executive CognitiveKernel, server, speech engines, model weights,

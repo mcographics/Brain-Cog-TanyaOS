@@ -49,6 +49,13 @@ class LifecycleTests(unittest.TestCase):
         self.assertEqual(event['routing_domain'], 'software_event_routing')
         self.assertIsNone(event['anatomy_target'])
 
+    def test_host_storage_provider_is_used(self):
+        destination = Path(self.temp.name) / 'host-data'
+        destination.mkdir()
+        monitor = BrainMonitor(Path(self.temp.name), storage_provider=lambda base: destination)
+        self.assertEqual(monitor.storage_root(monitor.base_dir), destination)
+        self.assertEqual(monitor._memory_summary()['state'], 'not initialized')
+
 
 if __name__ == '__main__':
     unittest.main()

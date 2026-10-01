@@ -80,9 +80,10 @@ class BrainMonitor:
     steps_per_sample = 16
     interval = 0.2
 
-    def __init__(self, base_dir: Path):
+    def __init__(self, base_dir: Path, *, storage_provider=None):
         self.base_dir = Path(base_dir).expanduser().resolve()
         self.base_dir.mkdir(parents=True, exist_ok=True)
+        self.storage_root = storage_provider or storage_root
         self.session_id = uuid.uuid4().hex[:12]
         self._lock = threading.RLock()
         self._simulation_lock = threading.RLock()
@@ -402,7 +403,7 @@ class BrainMonitor:
             self._stop.wait(self.interval)
 
     def _memory_summary(self):
-        path = storage_root(self.base_dir) / "tanya_memory.db"
+        path = self.storage_root(self.base_dir) / "tanya_memory.db"
         if not path.exists():
             return {"state": "not initialized", "count": None, "bytes": 0}
         try:
@@ -466,7 +467,7 @@ class BrainMonitor:
             print(f"[TanyaOS] BrainCog module file: {braincog_module_file}", flush=True)
             print("[TanyaOS] BrainCog import result: SUCCESS", flush=True)
 
-            log_dir = storage_root(self.base_dir)
+            log_dir = self.storage_root(self.base_dir)
             log_dir.mkdir(parents=True, exist_ok=True)
             # Model inference and kernel callbacks record events from request
             # threads; _event always runs under the monitor lock.
